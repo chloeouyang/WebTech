@@ -9,6 +9,25 @@
       ul {
         list-style-image: url(images/smiley.gif);
       }
+      body {
+        background-image: url(images/music.gif);
+      }
+
+      #beaver {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 2;
+      }
+
+      h3 {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+      }
+
+      /* didn't find out how to put the word over the picture */
     </style>
   </head>
   <body>
@@ -24,10 +43,16 @@
         <li>Web Tech</li>
         <li>Software design</li>
       </ul>
-      <h2>2018 FIFA World Cup Ranking</h2>
-      <ol type="I">
-        <li><img src="">France</li>
-      </ol>
     </ul>
+    <h2>2018 FIFA World Cup Ranking</h2>
+    <ol type="I">
+      <li><img src="images/France.png" alt="France" height="30" />France</li>
+      <li><img src="images/Croatia.png" alt="Croatia" height="30" />Croatia</li>
+      <li><img src="images/Belgium.png" alt="Belgium" height="30" />Belgium</li>
+      <li><img src="images/England.png" alt="England" height="30" />England</li>
+    </ol>
+    <hr />
+    <h3>Go Beavers!</h3>
+    <img src="images/beaver.jpg" alt="beaver" id="beaver" />
   </body>
 </html>
