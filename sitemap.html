@@ -23,12 +23,21 @@
       }
       hr {
         background-color: orange;
+        height: 3px;
+        border: none;
       }
+      details {
+        color: green;
+      }
+      a {
+        color: green;
+      }
+      /*new CSS property:change the color of the hyperlink */
     </style>
   </head>
   <body>
     <h1>Work done in WebTech by Runze Ouyang</h1>
-    <hr>
+    <hr />
     <ol type="i">
       <li><a href="ex01.html">Exercise 01</a></li>
       <br />
@@ -38,9 +47,22 @@
       <br />
       <li><a href="ex05.html">Exercise 05</a></li>
     </ol>
-    <hr>
+    <div style="border-top: 3px solid orange"></div>
+
     <a href="index.html"
       ><img src="images/home.jpg" alt="home" width="50px"
     /></a>
+
+    <details>
+      <summary>WebTech Introduction</summary>
+      <p>
+        The goal of this course is to provide working experience with the full
+        range of front-end technologies needed to produce a modern website.
+        Students will learn important topics of web design and programming
+        including an in-depth study of HTML, CSS and JavaScript. In addition,
+        students will be introduced to jQuery and Bootstrap in this class.
+      </p>
+    </details>
+    <!-- new HTML tag: "details" to include a paragraph in a few words -->
   </body>
 </html>
