@@ -14,6 +14,14 @@ h2 {
   text-decoration: underline;
 }
 
+#chloe {
+  color: green;
+}
+
+.star {
+  background-color: beige;
+}
+
 p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12pt;
@@ -21,4 +29,8 @@ p {
   margin: 40px;
   padding: 40px 10px 10px 10px;
   width: 50%;
+}
+
+p::first-line {
+  color: orange;
 }
