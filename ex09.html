@@ -1,44 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        h1{text-align: center;}
-        div{padding-bottom: 10px;}
+      h1 {
+        text-align: center;
+      }
+      div {
+        padding-bottom: 10px;
+      }
+      form {
+        background-color: lightgrey;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        padding: 20px;
+        color: darkblue;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>In-Class Exercise 09 - HTML Form</h1>
     <form method="POST" action="http://oim-apis.herokuapp.com/form2">
-    <div class="last">
+      <div class="last">
         <label for="last">Last name:</label>
-        <input type="text"
-        name="lastname"
-        id="last"
-        placeholder="Last name">
-    </div>
+        <input type="text" name="lastname" id="last" placeholder="Last name" />
+      </div>
 
-    <div class="first">
+      <div class="first">
         <label for="first">First name:</label>
-        <input type="text"
-        name="firstname"
-        id="first"
-        placeholder="First name">
-    </div>
-    <div>
+        <input
+          type="text"
+          name="firstname"
+          id="first"
+          placeholder="First name"
+        />
+      </div>
+      <div>
         Gender:
-        <label>Male
-            <input type="radio" name="gender" value="male">
+        <label
+          >Male
+          <input type="radio" name="gender" value="male" />
         </label>
-        <label>Female
-            <input type="radio" name="gender" value="female">
+        <label
+          >Female
+          <input type="radio" name="gender" value="female" />
         </label>
-    </div>
-
-
+      </div>
+      <div>My favorite topics are:</div>
+      <div>
+        <input type="checkbox" id="html" name="topics" value="html" />
+        <label for="html">Basic HTML</label>
+      </div>
+      <div>
+        <input type="checkbox" id="css" name="topics" value="css" />
+        <label for="css">CSS</label>
+      </div>
+      <div>
+        <input type="checkbox" id="tables" name="topics" value="tables" />
+        <label for="tables">Tables</label>
+      </div>
+      <div>
+        <label for="grade">Which grade do you expect to receive?</label>
+        <select name="grade" id="grade">
+          <option value="A">A</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B">B</option>
+          <option value="B-">B-</option>
+          <option value="C+">C+</option>
+        </select>
+      </div>
+      <div>
+        <div><label for="comments">Leave a Reply:</label></div>
+        <textarea
+          name="comments"
+          id="comments"
+          cols="25"
+          rows="5"
+          placeholder="Enter your comment here..."
+        ></textarea>
+      </div>
+      <div>
+        <button type="submit">
+          <img src="images/mailbox.png" height="30" alt="submit button" />
+        </button>
+        <button type="reset">
+          <img src="images/reset.png" height="30" alt="reset button" />
+        </button>
+      </div>
     </form>
-</body>
+  </body>
 </html>
