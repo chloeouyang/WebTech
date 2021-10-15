@@ -4,9 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homework 2-2: Feedback Form</title>
+    <link rel="stylesheet" href="styles/hw2-2.css" />
 </head>
 <body>
+    <h1>Customer Feedback</h1>
+    <form action="https://oim-apis.herokuapp.com/form" method="post">
+    <fieldset class="information">
+        <legend>
+            Your information:
+        </legend>
+        <div>
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" placeholder="Enter your name here">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="email" placeholder="Enter your email here">
+        </div>
+    </fieldset>
+
+    <fieldset class="review">
+        <legend>Your Review:</legend>
+        <div>
+            <label for="product">
+                What Apple product did you purchase?
+            </label>
+            <select name="product" id="product">
+                <option value="airpods-pro">AirPods Pro</option>
+                <option value="airpods1-wireless">AirPods with Wireless Charging case</option>
+                <option value="airpods1">AirPods with Charging Case</option>
+            </select>
+        </div>
+        <div>
+            What do you think of this product?
+            <br>
+            <label>
+                <input type="radio" name="rate" value="great">
+                Great
+            </label>
+            <label>
+                <input type="radio" name="rate" value="awesome">
+                Awesome
+            </label>            <label>
+                <input type="radio" name="rate" value="good">
+                Good
+            </label>
+        </div>
+        <div>
+            <label for="comment">
+                Comments:
+            </label>
+            <br>
+            <textarea
+          name="comment"
+          id="comment"
+          cols="50"
+          rows="5"
+        ></textarea>
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="signup" checked="checked">
+                Sign me up for email updates
+            </label>
+        </div>
+        <input type="submit" value="Submit"/>
+        <input type="reset" value="Reset"/>
+
+    </fieldset>
     
+    </form>
 </body>
 </html>
+<!-- I, Runze Ouyang, pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work -->
