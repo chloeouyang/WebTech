@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 13</title>
+  </head>
+  <body>
+    <h1>Manipulating Styles and Images</h1>
+    <div>
+      <img
+        src="images/tiger1.jpg"
+        alt="Tiger 1"
+        title="Tiger is walking"
+        width="400"
+        id="tiger1"
+      />
+    </div>
+    <script>
+      function enlargeImage() {
+        console.log("starting...");
+
+        // TODO: write pseudo-code first
+        // TODO: implement this function ✅
+        /*
+                1. "get" the image✅
+                - select the element (by id, tagname)✅
+                - assign this element to a variable✅
+
+                2. "get" the size of the image✅
+                - get the width/height
+                - assign the value to another variable, w
+                
+                3. change the size✅
+                - increase the value of w to anther value (assign the new value back to w)
+                - assign w back to the width of the image
+            */
+        const tigerImage = document.getElementById("tiger1");
+
+        // console.log(tigerImage.width);
+        let w = tigerImage.width;
+        // console.log(w);
+        w = w * 1.5;
+        tigerImage.width = w;
+      }
+
+      function resizeImage() {
+        const tigerImage = document.getElementById("tiger1");
+        let w = tigerImage.width;
+        w = w / 1.5;
+        tigerImage.width = w;
+      }
+
+      document.getElementById("tiger1").onmouseover = enlargeImage;
+      document.getElementById("tiger1").onmouseout = resizeImage;
+    </script>
+  </body>
+</html>

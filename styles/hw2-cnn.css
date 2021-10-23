@@ -2,11 +2,10 @@ ul {
   background-color: black;
   list-style-type: none;
   height: 50px;
+  margin: 0;
+  padding: 0;
 }
 
-li.content{
-    padding: 10px;
-}
 
 li a.content {
   float: left;
