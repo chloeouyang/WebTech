@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      form {
+        background-color: lightgrey;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        padding: 20px;
+      }
+
+      div {
+        padding: 10px;
+      }
+
+      #first{
+          width: 70px;
+      }
+
+      #second{
+          width: 70px;
+      }
+
+      button{
+          padding: 5px 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Simple Calculator</h1>
+    <form method="POST" action="">
+      <div>
+        <label for="result">Your Result:</label>
+        <input type="text" name="result" id="result" placeholder="" />
+      </div>
+
+      <div class="first">
+        <label for="first">Number 1:</label>
+        <input
+          type="text"
+          name="first"
+          id="first"
+          placeholder=""
+        />
+        <label for="second">Number 2:</label>
+        <input
+          type="text"
+          name="second"
+          id="second"
+          placeholder=""
+        />
+      </div>
+      <div>
+          <button id="add">add</button>
+          <button id="sub">sub</button>
+          <button id="mult">mult</button>
+          <button id="div">div</button>
+      </div>
+      <div>
+          <button id="clear">clear</button>
+      </div>
+    </form>
+
+    <script>
+        function add(){
+            const x = parseFloat(document.getElementById("first").value);
+            const y = parseFloat(document.getElementById("second").value);
+            document.getElementById("result").value=x+y;
+        }
+
+        document.getElementById("add").onclick=function(event){
+            event.preventDefault();
+            add();
+        }
+        
+        function sub(){
+            const x = parseFloat(document.getElementById("first").value);
+            const y = parseFloat(document.getElementById("second").value);
+            document.getElementById("result").value=x-y;
+        }
+
+        document.getElementById("sub").onclick=function(event){
+            event.preventDefault();
+            sub();
+        }
+
+        function mult(){
+            const x = parseFloat(document.getElementById("first").value);
+            const y = parseFloat(document.getElementById("second").value);
+            document.getElementById("result").value=x*y;
+        }
+
+        document.getElementById("mult").onclick=function(event){
+            event.preventDefault();
+            mult();
+        }
+
+        function div(){
+            const x = parseFloat(document.getElementById("first").value);
+            const y = parseFloat(document.getElementById("second").value);
+            document.getElementById("result").value=x/y;
+        }
+
+        document.getElementById("div").onclick=function(event){
+            event.preventDefault();
+            div();
+        }
+
+        function clear(){
+            document.getElementById("result").value="";
+            document.getElementById("first").value="";
+            document.getElementById("second").value="";
+        }
+
+        document.getElementById("clear").onclick=function(event){
+            event.preventDefault();
+            clear();
+        }
+    </script>
+  </body>
+</html>
