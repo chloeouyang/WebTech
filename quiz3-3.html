@@ -45,11 +45,11 @@
         <div>
           <label>
             Number:
-            <input id="input" maxlength="30" name="number" type="text"
+            <input id="number" maxlength="30" name="number" type="text"
             /></label>
         </div>
         <div>
-          <button id="button">Check</button>
+          <button id="check">Check</button>
         </div>
       </form>
       <div id="result">
@@ -59,18 +59,17 @@
   </div>
   <script>
       function oddeven(){
-        const x = parseInt(document.getElementById("input").value);
-        if (x%2==1){
-          document.getElementById("result").innerText="This number,",x,",is an odd number."
+        const x = parseInt(document.getElementById("number").value);
+
+        if (x%2 == 1){
+          document.getElementById("result").innerText="This number",x,"is an odd number."
         } 
-        else if(x%2==0){
-            document.getElementById("result").innerText="This number,",x,",is an even number."
+        else {
+            document.getElementById("result").innerText="This number",x,"is an even number."
         } 
       }
       
-      document.getElementById("button").onclick=function(){
-          oddeven()
-      }
+      document.getElementById("check").onclick= oddeven;
   </script>
 </body>
 </html>

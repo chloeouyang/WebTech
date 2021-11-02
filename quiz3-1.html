@@ -41,14 +41,36 @@
     </ul>
     <div>
       <div><p>
-        <img alt="Beaver" src="images/beaver.jpg" title="beaver" width="100"/>
-        Go Beavers!</p>
+        <img id="img1" alt="Beaver" src="images/beaver.jpg" title="beaver" width="100"/>
+        <span id="beaver">Go Beavers!</span> </p>
       </div>
       <div><p>
-        <img alt="Home" src="images/home.jpg" title="home" width="100"/>
-        Home! Sweet home!</p>
+        <img id="img2" alt="Home" src="images/home.jpg" title="home" width="100"/>
+        <span id="home">Home! Sweet home!</span></p>
       </div>
     </div>
   </div>
+  <script>
+      function beaver(){
+        document.getElementById("beaver").style.display="inline";
+        document.getElementById("beaver").style.color="green";
+        document.getElementById("beaver").style.fontSize="2em";
+        document.getElementById("beaver").style.backgroundColor="yellow";
+        document.getElementById("home").style.display="none"
+      }
+
+      document.getElementById("img1").onclick=beaver;
+
+      function home(){
+        document.getElementById("home").style.display="inline"
+        document.getElementById("home").style.color="red";
+        document.getElementById("home").style.fontSize="2em";
+        document.getElementById("home").style.fontWeight="bold";
+        document.getElementById("home").style.fontFamily="Arial";
+        document.getElementById("beaver").style.display="none"
+      }
+
+      document.getElementById("img2").onclick=home;
+  </script>
 </body>
 </html>
