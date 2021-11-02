@@ -21,7 +21,7 @@
   </style>
 </head>
 <body>
-  <h1>Quiz 3 - Question 2</h1>
+  <h1 id="title">Quiz 3 - Question 2</h1>
   <div>
     <p>Use internal JavaScript to implement the features below:</p>
     <ul>
@@ -44,22 +44,82 @@
       </li>
     </ul>
     <div>
-      <img
+      <img id="bird"
         alt="Larry Bird's Jersey"
         height="200"
         src="images/bird1.webp"
       />
-      <img
+      <img id="tatum"
         alt="Jayson Tatum's Jersey"
         height="200"
         src="images/tatum1.webp"
       />
-      <img
+      <img id="brown"
         alt="Jaylen Brown's Jersey"
         height="200"
         src="images/brown1.webp"
       />
     </div>
   </div>
+  <script>
+      function bird1(){
+        const playerImg=document.getElementById("bird");
+        playerImg.src="images/bird2.webp"
+        document.getElementById("title").innerText= "Larry Bird's Jersey"
+        
+      }
+      function bird2(){
+        const playerImg=document.getElementById("bird");
+        playerImg.src="images/bird1.webp"
+        document.getElementById("title").innerText= "Let's Go, Celtics"
+      }
+
+      document.getElementById("bird").onmouseover=function(){
+        bird1();
+      };
+
+      document.getElementById("bird").onmouseout=function(){
+        bird2();
+      };
+      function tatum1(){
+        const playerImg=document.getElementById("tatum");
+        playerImg.src="images/tatum2.webp"
+        document.getElementById("title").innerText= "Jayson Tatum's Jersey"
+        
+      }
+      function tatum2(){
+        const playerImg=document.getElementById("tatum");
+        playerImg.src="images/tatum1.webp"
+        document.getElementById("title").innerText= "Let's Go, Celtics"
+      }
+
+      document.getElementById("tatum").onmouseover=function(){
+        tatum1();
+      };
+
+      document.getElementById("tatum").onmouseout=function(){
+        tatum2();
+      };
+
+      function brown1(){
+        const playerImg=document.getElementById("brown");
+        playerImg.src="images/brown2.webp"
+        document.getElementById("title").innerText= "Jaylen Brown's Jersey"
+        
+      }
+      function brown2(){
+        const playerImg=document.getElementById("brown");
+        playerImg.src="images/brown1.webp"
+        document.getElementById("title").innerText= "Let's Go, Celtics"
+      }
+
+      document.getElementById("brown").onmouseover=function(){
+        brown1();
+      };
+
+      document.getElementById("brown").onmouseout=function(){
+        brown2();
+      };
+  </script>
 </body>
 </html>

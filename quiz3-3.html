@@ -45,17 +45,32 @@
         <div>
           <label>
             Number:
-            <input maxlength="30" name="number" type="text"
+            <input id="input" maxlength="30" name="number" type="text"
             /></label>
         </div>
         <div>
-          <button>Check</button>
+          <button id="button">Check</button>
         </div>
       </form>
-      <div>
+      <div id="result">
         This number is an odd/even number.
       </div>
     </div>
   </div>
+  <script>
+      function oddeven(){
+        const x = parseInt(document.getElementById("input").value);
+        if (x%2==1){
+          document.getElementById("result").innerText="This number,",x,",is an odd number."
+        } 
+        else if(x%2==0){
+            document.getElementById("result").innerText="This number,",x,",is an even number."
+        } 
+      }
+      
+      document.getElementById("button").onclick=function(){
+          oddeven()
+      }
+  </script>
 </body>
 </html>
