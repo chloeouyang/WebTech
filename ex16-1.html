@@ -38,7 +38,7 @@
       <div>
         <label>
           Select your gender:
-          <select name="gender">
+          <select id="gender" name="gender">
             <option value="Woman">Female</option>
             <option value="Man">Male</option>
           </select>
@@ -47,19 +47,57 @@
       <div>
         <label
           >Your information will appear here: <br />
-          <textarea cols="40"  name="result" rows="4" readonly></textarea>
+          <textarea
+            id="info"
+            cols="40"
+            name="result"
+            rows="4"
+            readonly
+          ></textarea>
         </label>
       </div>
-      <!-- <div>
+      <div>
         <label
           >Hide my age.
-          <input name="noAge" type="checkbox" />
+          <input id="check" name="noAge" type="checkbox" />
         </label>
-      </div> -->
+      </div>
       <div>
-        <input name="submit" type="button" value="Show" />
+        <input id="submit" name="submit" type="button" value="Show" />
         <input name="reset" type="reset" value="Clear" />
       </div>
     </form>
+    <script>
+      function show() {
+        if (
+          document.getElementById("name").value.length == 0 ||
+          document.getElementById("age").value.length == 0
+        ) {
+          alert("You have to enter something in both boxes.");
+        } else {
+          if (isNaN(document.getElementById("age").value)) {
+            alert("Age must be a number.");
+          } else {
+            const x = document.getElementById("name").value;
+            const y = document.getElementById("age").value;
+            const z = document.getElementById("gender").value;
+
+            if (document.querySelector("#check:checked") !== null) {
+              document.getElementById("info").value =
+                "Your name is " + x + "\nYour gender is " + z;
+            } else {
+              document.getElementById("info").value =
+                "Your name is " +
+                x +
+                "\nYour age is " +
+                y +
+                "\nYour gender is " +
+                z;
+            }
+          }
+        }
+      }
+      document.getElementById("submit").onclick = show;
+    </script>
   </body>
 </html>
