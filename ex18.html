@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        border: 10px solid green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img id="tiger" src="images/tiger1.jpg" alt="" />
+    <p id="text1"></p>
+    <script>
+      const slides = [
+        "images/tiger1.jpg",
+        "images/tiger2.jpg",
+        "images/tiger3.jpg",
+        "images/tiger4.jpg",
+      ];
+      const colors = ["green", "red", "blue", "yellow"];
+      const text = ["tiger1", "tiger2", "tiger3", "tiger4"];
+      let i = 0;
+      function slideShow() {
+        let tigerImage = document.getElementById("tiger");
+        let word = document.getElementById("text1");
+        if (i === slides.length) {
+          i = 0;
+        }
+        tigerImage.src = slides[i];
+        tigerImage.style.borderColor = colors[i];
+        word.innerText = text[i];
+        i++;
+        setTimeout(slideShow, 1000);
+      }
+      document.querySelector("body").onload = function () {
+        slideShow();
+      };
+    </script>
+  </body>
+</html>
