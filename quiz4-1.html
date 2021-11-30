@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Quiz 4-1</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.2rem;
+      }
+      div {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .center {
+        text-align: center;
+      }
+      .red {
+        color: red;
+      }
+      form {
+        background-color: lightgray;
+        width: 80%;
+        margin: 10px auto;
+        padding: 10px;
+      }
+      form div {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="center">Quiz 4-1</h1>
+    <div>
+      <p>Use internal JavaScript to implement the features below:</p>
+      <ul>
+        <li>
+          The user will enter two integers (the first number must be greater
+          than 0) in the two text inputs.
+        </li>
+        <li>
+          When Calculate button is clicked, the
+          <span class="red">product</span> of <b>all</b> the integers between
+          these two numbers (inclusive) will be calculated and displayed. For
+          example, if the two numbers are 2 and 5, then the product is 120
+          (because 120 = 2 * 3 * 4 * 5).
+        </li>
+        <li>
+          For full points, you need to validate the inputs properly. (5 points)
+        </li>
+      </ul>
+    </div>
+    <div>
+      <form class="center">
+        <div>
+          <label
+            >From:
+            <input id="from" name="from" size="10" type="text" />
+          </label>
+          <label
+            >To:
+            <input id="to" name="to" size="10" type="text" />
+          </label>
+        </div>
+        <div>
+          <input id="calc" name="calc" type="button" value="Calculate" />
+          <input name="reset" type="reset" value="Reset" />
+        </div>
+        <div id="output">The product is ?.</div>
+      </form>
+    </div>
+    <script>
+        
+        document.getElementById("calc").onclick=calc;
+        function calc(){
+            let x = +document.getElementById("from").value;
+            let y = +document.getElementById("to").value;
+            if (x<y && x!==0){
+                for (let i = 1; i < y-x+1; i = i + 1){
+                    x=x*(x+i);}
+                document.getElementById("output").innerText="The product is "+x+"."
+            } else{
+                if(x==0 || x.length==0 || y.length==0||x>y){
+                    alert("You need to enter something in both boxes; the first number cannot be zero, and must be smaller than the second one.")
+                }
+            }
+          
+            // if (x==0 || x.length==0 || y.length==0||x>y){
+            //     alert("You need to enter something in both boxes; the first number cannot be zero, and must be smaller than the second one.")
+            // } else{
+            //     for (let i = 1; i < y-x+1; i = i + 1){
+            //         x=x*(x+i);
+            //     }
+            //     document.getElementById("output").innerText="The product is "+x+"."
+            // }
+        }
+
+    </script>
+  </body>
+</html>
