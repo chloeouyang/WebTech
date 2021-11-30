@@ -77,10 +77,14 @@
         function calc(){
             let x = +document.getElementById("from").value;
             let y = +document.getElementById("to").value;
+            result = 1;
             if (x<y && x!==0){
-                for (let i = 1; i < y-x+1; i = i + 1){
-                    x=x*(x+i);}
-                document.getElementById("output").innerText="The product is "+x+"."
+                for (let i = x; i <= y; i = i + 1){
+                    console.log(result);
+                    result=result* i;
+                    console.log(result);
+                }
+                document.getElementById("output").innerText="The product is "+result+"."
             } else{
                 if(x==0 || x.length==0 || y.length==0||x>y){
                     alert("You need to enter something in both boxes; the first number cannot be zero, and must be smaller than the second one.")
